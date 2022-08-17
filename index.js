@@ -20,7 +20,7 @@ function generatePass(){
     for(let i=0; i<15; i++){
         passGenerated += characters[Math.floor(characters.length*Math.random())]
     }
-    console.log(passGenerated)
+    console.log(typeof passGenerated[0])
     return passGenerated;
 }
 
