@@ -1,4 +1,5 @@
 let btnEl = document.getElementById("btn")
+let btn1El = document.getElementById("btn1")
 let firstpassEl = document.getElementById("first-pass")
 let secondpassEl = document.getElementById("second-pass")
 
@@ -28,3 +29,12 @@ function renderToScreen(whichCell){
     whichCell.textContent = generatePass()
 }
 console.log("hello")
+
+btn1El.addEventListener("click",function(){
+    let transfer = document.createElement("input")
+    document.body.append(transfer)
+    transfer.value = firstpassEl.textContent
+    transfer.select()
+    document.execCommand("copy")
+    document.body.removeChild(transfer)
+})
