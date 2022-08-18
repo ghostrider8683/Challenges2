@@ -33,7 +33,7 @@ console.log("hello")
 btn1El.addEventListener("click",function(){
     let transfer = document.createElement("input")
     document.body.append(transfer)
-    transfer.value = firstpassEl.textContent
+    transfer.value = firstpassEl.textContent + "    " + secondpassEl.textContent
     transfer.select()
     document.execCommand("copy")
     document.body.removeChild(transfer)
